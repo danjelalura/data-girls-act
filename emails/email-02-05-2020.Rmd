@@ -5,7 +5,7 @@ Data Girls is aimed at providing Data Science related skills. Once all of you fe
 
 After carefully examining your responses it was decided that Data Girls will operate in the following manner:
 
-    - Most of the activity will be conducted over discord. Join by clicking on this link.
+    - Most of the activity will be conducted over discord. Join by clicking on [this](https://discord.com/invite/C5ypBbRz) link.
     - Since the days you were available weren't that compatible, most of the workshops will either be recorded or shared with you via a jupyter notebook.
     - You are highly encouraged to share your experiences and to work on preparing workshops for our community. Most of us come from a Computer Science background, so if you possess skills in financial analysis, or business analytics we would be happy to learn more through you.
     - Gradually the club will integrate most of the content in a webpage.
