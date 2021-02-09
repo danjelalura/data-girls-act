@@ -1,0 +1,24 @@
+Hello ladies,
+
+Thank you for becoming part of Data Girls! ❤
+Data Girls is aimed at providing Data Science related skills. Once all of you feel confident enough, we will hopefully move towards a project based approach.
+
+After carefully examining your responses it was decided that Data Girls will operate in the following manner:
+
+    - Most of the activity will be conducted over discord. Join by clicking on this link.
+    - Since the days you were available weren't that compatible, most of the workshops will either be recorded or shared with you via a jupyter notebook.
+    - You are highly encouraged to share your experiences and to work on preparing workshops for our community. Most of us come from a Computer Science background, so if you possess skills in financial analysis, or business analytics we would be happy to learn more through you.
+    - Gradually the club will integrate most of the content in a webpage.
+    - There might be occasional club meetings to require feedback and find ways in which we could improve the club.
+    - There are no workshops uploaded on the discord group chat at the moment as the first workshop is still work-in-progress.You will be notified via email everytime a workshop is ready. 
+
+Considering the fact that this is only the beginning, the above specifications might change. Data Girl's end goal is to create a community of learners and people who share knowledge regarding Data Science. 
+At the moment Data Girls is an effort we work on in our free time, so it is highly recommended to be understanding when a group member is not able to help you right away.
+Not everything might be perfect at the beginning, but I believe we will figure it out together what is the best way to improve our knowledge.
+
+I am really excited to embark on this journey with you all!
+
+Feel free to respond to this email with your questions or comments and don't forget to join the discord group chat to say hi and introduce yourself.
+
+Best regards,
+Danjela
