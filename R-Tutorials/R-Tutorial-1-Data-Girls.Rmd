@@ -1,0 +1,252 @@
+---
+title: "Tutorial | ACT Data Girls"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+**This tutorial is created by the Data Girls club at the [American College of Thessaloniki](https://www.act.edu/). The content is tailored to the knowledge level of the club members.**
+
+
+## Introduction to RStudio
+
+RStudio provides a user-friendly environment to write R code. It is an open source software and it is available [here](https://rstudio.com/).
+
+The RStudio interface is comprised of the following parts:
+
+- The Console Tab: This is where you can enter commands and see their output.
+- The Terminal Tab: This tab provides a shell to communicate with your system.
+- The Environment Tab: This is where all our datasets and variables are shown.
+- The History Tab: Shows a list of commands used so far.
+- The Files Tab: Shows files and directories (folders) in your workspace.
+- The Plot Tab: This is where your graphs will be displayed.
+- The Packages Tab: Contains a list of packages and allows you to install and activate R packages needed for certain processes. You can think of a package as a software needed to finish a particular task like plotting a histogram.
+- Help: Shows package/function documentation that will help you understand how a function works.
+
+### Some useful console useful commands:
+
+- `install.packages()`: installs an R package on your system.
+- `library()`: activates an R package so that you can use the utilities of the package.
+- `getwd()`: prints the directory you are in
+- `setwd()`: sends you to another directory
+- `help(package="package name")`: opens the documentation of the package on the `help` tab
+
+## Introduction to R
+R is a an environment and programming language for statistical computing. R is heavily used within the Data Science realm and that is why we chose to start our journey with R.
+
+### Working with Data in R
+
+For this first tutorial we will use the following package collection:
+- `tidyverse` is a collection of R packages designed for data science. This suite of packages contains packages that are aimed at data manipulation, visualization etc.
+
+
+Let's activate these packages:
+
+```{r activate-tidyverse, exercise=TRUE, exercise.eval=TRUE}
+library(tidyverse)
+```
+In case you don't have `tidyverse` installed you can install it using `install.packages('tidyverse')`.
+
+As it can be seen the above command activated the following packages:
+
+- `ggplot2`: a package used to construct data visualization  
+- `purrr`: makes it easier to work with functions and vectors (functions will be introduced later. For now focus on the high level details to get a bigger picture)
+- `tibble`: a package that provides utilities for handling tibbles. A tibble is a special type of table in R.
+- `dplyr`: used for data manipulation
+- `tidyr`: provides tools to tidy data up. Your data is not always going to be in the best possible shape initially. That's why you need to scrub it.
+- `stringr`: offers tools for string manipulation
+- `readr`: makes it easier to read data from a file
+- `forcats`: useful package for working with categorical data
+
+*Categorical data are non-numerical data or data that don't have mathematical meaning. *
+
+### Working with R built-in datasets
+
+Let's get our hands dirty!
+
+R contains many built in datasets. Running the `data()` function provides a list of R packages.
+
+Try it by yourself:
+```{r print-datasets, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+You can have a look at a specific dataset by simply typing its name in the console:
+For instance `iris` is a built-in dataset.
+
+Run the code below to see iris data.
+```{r print-iris, exercise=TRUE, exercise.eval=TRUE}
+iris
+```
+
+### Short Quiz
+```{r q1}
+quiz(
+  question("Does `Titanic` belong to the built in datasets?",
+    answer("True", correct = TRUE),
+    answer("False")
+    ),
+  question("How can you see if a particular dataset is part of the built-in datasets",
+           answer("By going through the results of the `data()` function and then typing the name of the dataset in the console", correct = TRUE),
+           answer("Typing the name of the dataset in the console", correct=TRUE),
+           answer("Using the `library()` function"),
+           answer("Using the install.packages() function")))
+```
+
+
+### Peeking into the dataset
+
+Having a look at all the data in the dataset is almost never useful as it consumes a lot of time and doesn't provide any meaningful information about the data.
+It might be useful to get a general description of the dataset. Prefixing the name of the dataset by a ? provides a general overview and description of the dataset.
+
+Run the code below:
+```{r peek-into, exercise=TRUE, exercise.eval=TRUE}
+?iris
+```
+
+#### **Displaying the first 5 results of the dataset.**
+```{r 5-results, exercise=TRUE, exercise.eval=TRUE}
+head(iris, 5)
+```
+The `head()` function allows you to do this by specifying the name of the dataset as the first argument and the number of rows as the second argument.
+
+Play with the code above to get your preferred number of rows.
+
+#### **Number of rows and columns**
+In order to determine how large our dataset is we need to obtain its dimensions. R provides several functions for this task.
+
+The `nrow()` function displays the number of rows in a dataset.
+
+```{r n-rows, exercise=TRUE, exercise.eval=TRUE}
+nrow(iris)
+```
+
+The `ncol()` function displays the number of columns in a dataset.
+
+```{r n-cols, exercise=TRUE, exercise.eval=TRUE}
+ncol(iris)
+```
+
+We can see that the `iris` dataset is a 150 by 5 dataset. `dim()` is another function that makes it possible to explicitly display the dimensions of a dataset.
+`dim()` takes the name of the dataset as an argument.
+
+Try it yourself for the `mtcars` dataset.
+```{r mtcars, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+### Short quiz
+
+```{r q2}
+quiz(question("What are the dimensions of the `mtcars` dataset?",
+              answer("34 by 4"),
+              answer("31 by 78"),
+              answer("89 by 122"),
+              answer("32 by 11", correct = TRUE))
+     
+     )
+```
+
+Another useful information you might need when analyzing a dataset are the names of columns and what they represent. The `names()` function provides this functionality:
+Let's have a look at the names of the columns in the `iris` dataset:
+
+```{r iris-names, exercise=TRUE, exercise.eval=TRUE}
+names(iris)
+```
+
+Now is your turn to find out what are names of the columns in the `mtcars` dataset.
+
+```{r mtcars-names, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+### Short quiz
+
+```{r, q3}
+quiz(
+  question("Is `hp` a column name in the `mtcars` dataset?",
+           answer("False"),
+           answer("True", correct = TRUE))
+  )
+```
+
+In case you want to access the data of one column only you can use the `$` dollar sign operator to do so:
+`name_of_dataset$name_of_colum`
+So in order to show data from the `Sepal.Width` column of the `iris` dataset you would use the following notation:
+```{r iris-access-col, exercise=TRUE, exercise.eval=TRUE}
+iris$Sepal.Width
+```
+
+It's always useful to see what the data type of the column is so that you can make your computations even easier. In case a column seems to display numerical data but underneath it is a string datatype, you can't perform mathematical operations upon that column.
+
+The `typeof()` function is really useful for finding out the datatype of a certain column/varaible. So if the provide the column `Sepal.Width` as an argument to the `typeof()` function we will see that that column is a `double`. A `double` is simply a fractional number.
+```{r iris-col-type, exercise=TRUE, exercise.eval=TRUE}
+typeof(iris$Sepal.Width)
+```
+
+It's your turn to find out the data type of the `hp` column in the `mtcars` dataset.
+```r{mt-cars-datatype, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+```{r, q4}
+quiz(
+  question("What data type does `hp` in `mtcars` have?",
+           answer("string"),
+           answer("integer"),
+           answer("double", correct = TRUE),
+           answer("boolean")),
+  question("How can you find out the datatype of `hp`?",
+           answer("typeof(mtcars)"),
+           answer("typeof(hp)"),
+           answer("typeof(mtcars$hp)", correct = TRUE))
+)
+```
+
+Lastly, in order to get a general overview of the dataset we need some summary statistics. Summary statistics include information such as: mean, median, mode, minimum value, maximum value, range, standard deviation etc. There are specific functions to find each of the following measurements but in order to get generic statistical information about each column in the dataset we can use the `summary()` function. `summary()` takes the name of the dataset as the first argument.
+
+Let's see a summary of the `iris` dataset:
+```{r iris-summary, exercise=TRUE, exercise.eval=TRUE}
+summary(iris)
+```
+
+As it can be seen, the `summary()` function displays information about each column and the type of information varies depending on the data type of the column:
+
+  Sepal.Length      
+ Min.   :4.300    
+ 1st Qu.:5.100    
+ Median :5.800    
+ Mean   :5.843    
+ 3rd Qu.:6.400     
+ Max.   :7.900   
+ 
+ For instance the mean of the `Sepal.Length` function is 5.8.
+ 
+ Species  
+ setosa    :50  
+ versicolor:50  
+ virginica :50  
+ 
+ Since the `Species` column is not a numerical column we can see that no mean or maximum/minimum values are displayed for it. It just shows how many of each discrete value in `Species` does the dataset contain.
+ 
+ Now it's your turn to examine some summary statistics of the `mtcars` dataset:
+ 
+ ```{r mtcars-summary, exercise=TRUE, exercise.eval=TRUE}
+
+```
+
+### Quiz 5
+
+```{r, q5}
+quiz(question("What is the minimum value on the `gear` column of the `mtcars` dataset?",
+              answer("2"),
+              answer("34"),
+              answer("55"),
+              answer("3", correct = TRUE)))
+```
+
+
