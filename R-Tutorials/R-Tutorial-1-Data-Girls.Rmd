@@ -189,7 +189,8 @@ typeof(iris$Sepal.Width)
 ```
 
 It's your turn to find out the data type of the `hp` column in the `mtcars` dataset.
-```r{mt-cars-datatype, exercise=TRUE, exercise.eval=TRUE}
+
+```{r mt-cars-datatype, exercise=TRUE, exercise.eval=TRUE}
 
 ```
 
