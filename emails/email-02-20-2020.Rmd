@@ -1,0 +1,24 @@
+Good evening ladies,
+
+Hope you are having a great weekend! ❤
+
+I would like to let you know that our first interactive tutorial is now deployed on shinyapps.io, a platform for hosting R applications. It can be accessed through this link: https://act-data-girls.shinyapps.io/R-Tutorial-1-Data-Girls/#section-introduction-to-rstudio.
+
+The code written to construct the tutorial can be found in the following git repository: https://github.com/danjelalura/data-girls-act.
+
+The programming language that the tutorial introduces is R. Please keep in mind that all the programming language content presented in our club will be put in the context of data analysis.
+
+The tutorial is an interactive one, which means that you can write code and run it within the browser, but in case you would like to run the examples locally in your computer please follow the instructions below:
+
+Install R Tutorial: https://vimeo.com/203516510
+Install RStudio Tutorial: https://vimeo.com/203516968
+
+Please send a message to the discord chat in case you encounter any errors. We can go through them together and help you get your environment up and running. 
+If you managed to finish the Installation with no errors please send a confirmation like: "I finished the installation".
+
+If you need help using the tutorial you can either message me on discord or send an email.
+
+Looking forward to your feedback!
+
+Warm regards,
+Danjela
