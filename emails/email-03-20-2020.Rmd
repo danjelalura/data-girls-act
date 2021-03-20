@@ -1,0 +1,22 @@
+Hello Ladies,
+
+I hope you are doing well! ❤
+
+This email is to let you know about  a bunch of things that have been going on lately.
+
+[1]
+The first SQL Tutorial is now uploaded on github. SQL stands for Standard Query Language, and it is widely used to query data from relational databases. I strongly recommend you practice SQL on https://www.elephantsql.com/ .
+The tutorial is intentionally designed to not cover all the basics, so I would suggest you either ask me or google the terms or commands you don't understand. I believe searching for answers helps you build stronger skills.
+
+[2]
+Also, an exciting initiative that will soon be finalized, is the initiation of the first R Ladies chapter in Thessaloniki. I am still working with the R Ladies team to provide the necessary tech infrastructure for starting the chapter.
+In case you would like to become part of this initiative, please let me know and start learning R as soon as possible. You can always get started by looking at our first R tutorial: https://act-data-girls.shinyapps.io/R-Tutorial-1-Data-Girls/#section-introduction-to-rstudio
+I am confident more R tutorials will come in the future.
+
+ [3]
+Stepan emailed me with information regarding a series of workshops by Goethe Institute on equality and the role of women in the field of digital games. You might find it interesting. More information can be found in the attached documents.
+
+
+Please let me know in case you have any questions or comments.
+Warm regards,
+Danjela
