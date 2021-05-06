@@ -1,0 +1,6 @@
+* R
+* DONE Introduction to the RStudio environment
+  CLOSED: [2021-05-06 Thu 02:20]
+* DONE Introduction to R
+  CLOSED: [2021-05-06 Thu 02:20]
+* TODO Using functional programming principles to perform Data Analysis in R 

@@ -1,0 +1,8 @@
+* SQL
+
+* TODO Elephant SQL
+* TODO DBMS
+* DONE Intro to SQL
+  CLOSED: [2021-05-06 Thu 02:22]
+* DONE ERDs
+  CLOSED: [2021-05-06 Thu 02:22]
